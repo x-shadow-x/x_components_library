@@ -11,6 +11,10 @@
             {
               "path": "/hello",
               "title": "Hello"
+            },
+            {
+              "path": "/swiper",
+              "title": "Swiper"
             }
           ]
         }
