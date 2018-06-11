@@ -1,5 +1,5 @@
 ## Hello
-**Hello 组件，Hello 组件，Hello 组件，Hello 组件**
+**Hello 组件**
 ### 基本用法
 ```html
 <template>
