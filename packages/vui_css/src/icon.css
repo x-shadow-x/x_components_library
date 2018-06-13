@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'iconfont';
+  src: url('../font/fontawesome-webfont.woff2');
+  font-weight: normal;
+}
+
+@b v_icon {
+  font-family: iconfont !important;
+  font-style: normal;
+  display: inline-block;
+  vertical-align: middle;
+
+  text-align: center;
+  position: relative;
+
+  @m default {
+    &:before {
+      content: "\f2dc";
+    }
+  }
+
+  @m commenting  {
+    &:before {
+      content: "\f27a";
+    }
+  }
+
+  @m info  {
+    &:before {
+      content: "\f05a";
+    }
+  }
+
+  @m info-warm  {
+    &:before {
+      content: "\f05a";
+      color: red;
+    }
+  }
+}

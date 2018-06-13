@@ -75,29 +75,29 @@
         if(this.distance < -50) {
           if(this.swiperIndex + 1 < length || this.swiperIndex <= length && this.isLoop) {
             // 判断是否已经滑动到最后一个swiper—slide
-            this.handleSlideMove('next');
             this.handleSwiperIndex('next');
             this.handleBulletIndex('next');
+            this.handleSlideMove('next');
           } else {
-            this.handleSlideMove('current');
             this.handleSwiperIndex('current');
             this.handleBulletIndex('current');
+            this.handleSlideMove('current');
           }
         } else if(this.distance > 50) {
           if(this.swiperIndex - 1 >= 0 || this.swiperIndex <= 0 && this.isLoop) {
             // 判断是否已经滑动到第一个swiper—slide
-            this.handleSlideMove('pre');
             this.handleSwiperIndex('pre');
             this.handleBulletIndex('pre');
+            this.handleSlideMove('pre');
           } else {
-            this.handleSlideMove('current');
             this.handleSwiperIndex('current');
             this.handleBulletIndex('current');
+            this.handleSlideMove('current');
           }
         } else {
-          this.handleSlideMove('current');
           this.handleSwiperIndex('current');
           this.handleBulletIndex('current');
+          this.handleSlideMove('current');
         }
       },
 
@@ -108,11 +108,19 @@
         case 'next':
           // 滑动到下一块
           // 注意手指往左滑动的时候distance实际是负的~所以用加法
+          if(this.swiperIndex === length + 1) {
+            this.swiperIndex = 1;
+            this.slideX = this.distance;
+          }
           this.slideX = this.slideX - (this.containerWidth + this.distance);
           break;
         case 'pre':
           // 滑动到上一块
-          // 注意手指往左滑动的时候distance实际是正的~所以用减法
+          // 注意手指往右滑动的时候distance实际是正的~所以用减法
+          if(this.swiperIndex === 0) {
+            this.swiperIndex = length;
+            this.slideX = -this.containerWidth * (length + 1) + this.distance
+          }
           this.slideX = this.slideX + (this.containerWidth - this.distance);
           break;
         default:
