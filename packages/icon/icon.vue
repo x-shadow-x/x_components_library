@@ -10,7 +10,7 @@
     props: {
       type: String,
       size: {
-        type: [请, String],
+        type: [Number, String],
         default: '14'
       },
       fontUnit: {

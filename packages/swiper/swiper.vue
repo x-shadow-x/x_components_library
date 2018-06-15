@@ -61,6 +61,7 @@
     },
     methods: {
       handleTouchStart(e) {
+        this.isTransition = false;
         this.startX = e.touches[0].pageX;
       },
 
