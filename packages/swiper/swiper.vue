@@ -188,7 +188,7 @@
 
       handleSlideEnd() {
         this.isTransition = false;
-        
+        this.distance = 0;
         if(this.isLoop) {
           this.handleLoop();
         }
