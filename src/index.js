@@ -1,4 +1,5 @@
 import Hello from '../packages/hello/hello.vue'
+import Icon from '../packages/icon/icon.vue'
 import Swiper from '../packages/swiper/swiper.vue'
 
 const install = function (Vue) {
@@ -7,6 +8,7 @@ const install = function (Vue) {
   }
 
   Vue.component(Hello.name, Hello)
+  Vue.component(Icon.name, Icon)
   Vue.component(Swiper.name, Swiper)
 }
 
@@ -15,6 +17,5 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default {
-  install,
-  Hello
+  install
 }
