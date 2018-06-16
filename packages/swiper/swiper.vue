@@ -7,7 +7,8 @@
       @transitionend ="handleSlideEnd">
       <div
         class="v_swiper__slide"
-        v-for="item in list"
+        v-for="(index, item) in list"
+        :key="index"
         @touchstart="handleTouchStart"
         @touchmove="handleTouchMove"
         @touchend="handleTouchEnd">
